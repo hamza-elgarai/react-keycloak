@@ -147,7 +147,7 @@ function App() {
         <div className="App">
         <nav className="navbar">
           <h3 className="navbar__title">
-            {keycloak.authenticated ? 'Welcome to our game ' + keycloak.tokenParsed?.preferred_username : "Let's play Tic-Tac-Toe"}
+            {keycloak.authenticated ? 'Welcome to our game ' + keycloak.tokenParsed?.preferred_username : "Let's play a game "}
           </h3>
           {!keycloak.authenticated && (
             <button className="navbar__button" onClick={() => keycloak.login()}>Login</button>
@@ -157,7 +157,26 @@ function App() {
             
           )}
         </nav>
-
+          {!keycloak.authenticated && (
+             
+              <div class="card">
+                <div class="card-header">
+                <h1 class="title">
+                  <span class="tic">Tic-</span>
+                  <span class="tac">Tac-</span>
+                  <span class="toe">Toe</span>
+                </h1>
+                </div>
+                <div class="card-body">
+                  <p class="card-description">
+                    Tic Tac Toe is a classic paper-and-pencil game played between two players. The board consists of a 3x3 grid, and the players take turns marking X or O in the empty cells. The goal is to form a line of three consecutive marks (horizontally, vertically, or diagonally) before the opponent does. The game ends in a draw if all cells are filled and no player has won.
+                  </p>
+                  <p class="card-description">
+                    Tic Tac Toe is a simple yet strategic game that can be enjoyed by people of all ages. It helps improve critical thinking, spatial awareness, and decision-making skills. Whether you're a beginner or a seasoned player, Tic Tac Toe is a great way to have fun and challenge yourself.
+                  </p>
+                </div>
+              </div>
+                        )}
             {/* the private component won't load if the user is not authenticated */}
             {/* Look at the helpers/PrivateRoute.jsx to understand */}
             <PrivateRoute>

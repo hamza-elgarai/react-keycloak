@@ -60,6 +60,39 @@
   background-color: #555;
 }
 
+.card {
+  
+  width: 475px;
+  background-color: #efefef;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+  margin: 2.5rem auto;
+}
+
+.card-header {
+  background-color: #5b5a5a83;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* .card-title {
+  color: #fff;
+  font-size: 20px;
+  margin: 0;
+} */
+
+.card-body {
+  padding: 20px;
+}
+
+.card-description {
+  color: #333;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
 
 
 .tic {
